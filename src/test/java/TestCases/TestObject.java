@@ -1,7 +1,13 @@
 package TestCases;
 
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
@@ -24,6 +30,21 @@ public class TestObject {
 	void teardown(){
 		
 		Driver.close();
+		
+	}
+	
+	public String captureScreens(String tname) throws IOException//tname is a faildetestmethod name for ss name
+	{
+		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());// timeStamp 
+		TakesScreenshot takesScreenshot = (TakesScreenshot) Driver;	
+		File sourceFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
+		
+		String targetFilepath = System.getProperty("user.dir")+"\\screenshots\\" + tname + "_" + timeStamp + ".png";
+		
+		File targetFile = new File(targetFilepath); //converting string to file formate
+		
+		sourceFile.renameTo(targetFile);
+		return targetFilepath;
 		
 	}
 
