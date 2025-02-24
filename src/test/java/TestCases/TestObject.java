@@ -33,19 +33,19 @@ public class TestObject {
 		
 	}
 	
-	public String captureScreens(String tname) throws IOException//tname is a faildetestmethod name for ss name
-	{
-		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());// timeStamp 
-		TakesScreenshot takesScreenshot = (TakesScreenshot) Driver;	
-		File sourceFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
-		
-		String targetFilepath = System.getProperty("user.dir")+"\\screenshots\\" + tname + "_" + timeStamp + ".png";
-		
-		File targetFile = new File(targetFilepath); //converting string to file formate
-		
-		sourceFile.renameTo(targetFile);
-		return targetFilepath;
-		
-	}
+//	public String captureScreens(String tname) throws IOException//tname is a faildetestmethod name for ss name
+//	{
+//		String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());// timeStamp 
+//		TakesScreenshot takesScreenshot = (TakesScreenshot) Driver;	
+//		File sourceFile = takesScreenshot.getScreenshotAs(OutputType.FILE);
+//		
+//		String targetFilepath = System.getProperty("user.dir")+"\\screenshots\\" + tname + "_" + timeStamp + ".png";
+//		
+//		File targetFile = new File(targetFilepath); //converting string to file formate
+//		
+//		sourceFile.renameTo(targetFile);
+//		return targetFilepath;
+//		
+//	}
 
 }

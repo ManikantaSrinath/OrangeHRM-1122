@@ -82,16 +82,16 @@ public class ExtentReportManager implements ITestListener{
 			test =  extent.createTest(result.getTestClass().getName());
 			test.assignCategory(result.getMethod().getGroups());
 			
-			test.log(Status.FAIL,  result.getName() +"Test got failed: ");
-			test.log(Status.FAIL,   result.getThrowable().getMessage()); //it will give text why it got failed
-			
-			try {
-				String imgpath = new TestObject().captureScreens(result.getName());
-				test.addScreenCaptureFromPath(imgpath);
-			}
-			catch(IOException e1) {
-				e1.printStackTrace();//captureScreen(result.getName());
-			}
+//			test.log(Status.FAIL,  result.getName() +"Test got failed: ");
+//			test.log(Status.FAIL,   result.getThrowable().getMessage()); //it will give text why it got failed
+//			
+//			try {
+//				String imgpath = new TestObject().captureScreens(result.getName());
+//				test.addScreenCaptureFromPath(imgpath);
+//			}
+//			catch(IOException e1) {
+//				e1.printStackTrace();//captureScreen(result.getName());
+//			}
 			
 	}
 		  

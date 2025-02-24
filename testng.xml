@@ -9,9 +9,14 @@
   
   <test thread-count="5" name="Test">
     <classes>
-      <class name="TestCases.AddEmployeTest"/>
+  <!--<class name="TestCases.AddEmployeTest"/>
       <class name="TestCases.InvalidLoginTest"/>
-      <class name="TestCases.LoginpageTest"/>
+      <class name="TestCases.LoginpageTest"/>-->
+     
+      <class name="TestCases.EmployeeListTest"/>
+      <class name="TestCases.ConfigureUplodeTest"/>
+      
+     
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
