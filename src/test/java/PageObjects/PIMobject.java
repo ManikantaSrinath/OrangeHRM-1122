@@ -9,8 +9,7 @@ public class PIMobject extends BaseObject{
 	public PIMobject(WebDriver Driver) {
 		super(Driver);
 	}
-	
-	
+
 	
 	@FindBy(xpath = "//button[normalize-space()='Add']") WebElement PimAddbtm; 
 	
@@ -26,11 +25,11 @@ public class PIMobject extends BaseObject{
 	
 	@FindBy(xpath = "//div[@class='oxd-input-group oxd-input-field-bottom-space']//div//input[@class='oxd-input oxd-input--active']") WebElement empidnum;
 
+	@FindBy(xpath = "//button[@class='oxd-icon-button oxd-icon-button--solid-main employee-image-action']") WebElement addphotoclcl;
+	
 	@FindBy(xpath = "//button[normalize-space()='Save']") WebElement savebuttn;
 	
 	@FindBy(xpath = "(//h6[normalize-space()='Personal Details']") WebElement conformationmsg;
-	
-	
 	
 	public void Clickpim() {
 		PimAddbtm.click();
@@ -44,9 +43,6 @@ public class PIMobject extends BaseObject{
 		firstnametxt.sendKeys(firstuser);
 		
 	}
-	
-
-	
 	public void SetMiddleName(String midname) {
 		middlenametxt.sendKeys(midname);
 	}
@@ -54,7 +50,6 @@ public class PIMobject extends BaseObject{
 	public void SetLastName(String lastname) {
 		lastnametxt.sendKeys(lastname);
 	}
-	
 	
 	public void Clearempid() {
 		defualtempidnum.clear();		
@@ -64,6 +59,10 @@ public class PIMobject extends BaseObject{
 		empidnum.sendKeys(num);		
 	}
 	
+	public void Setaddpic() {
+		addphotoclcl.click();
+	}
+
 	public void Clicksave() {
 		savebuttn.click();		
 	}
