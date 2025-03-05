@@ -20,10 +20,12 @@ public class TestObject {
 		
 		Driver = new ChromeDriver();
 		Driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
+		//Driver.get("https://www.cit.com/cit-bank/resources/calculators/certificate-of-deposit-calculator");
 		Thread.sleep(3000);
 		Driver.manage().window().maximize();
 		Driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 	
+		
 	}
 	
 	@AfterClass
